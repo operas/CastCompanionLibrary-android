@@ -16,9 +16,6 @@
 
 package com.google.sample.castcompanionlibrary.notification;
 
-import static com.google.sample.castcompanionlibrary.utils.LogUtils.LOGD;
-import static com.google.sample.castcompanionlibrary.utils.LogUtils.LOGE;
-
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -53,6 +50,9 @@ import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 
+import static com.google.sample.castcompanionlibrary.utils.LogUtils.LOGD;
+import static com.google.sample.castcompanionlibrary.utils.LogUtils.LOGE;
+
 /**
  * A service to provide status bar Notifications when we are casting. For JB+ versions, notification
  * area provides a play/pause toggle and an "x" button to disconnect but that for GB, we do not show
@@ -66,7 +66,7 @@ public class VideoCastNotificationService extends Service {
             "com.google.sample.castcompanionlibrary.action.stop";
     public static final String ACTION_VISIBILITY =
             "com.google.sample.castcompanionlibrary.action.notificationvisibility";
-    private static int NOTIFICATION_ID = 1;
+    private static int NOTIFICATION_ID = 1223;
 
     private static final String TAG = LogUtils.makeLogTag(VideoCastNotificationService.class);
     private String mApplicationId;

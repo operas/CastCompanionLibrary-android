@@ -7,10 +7,11 @@
 
     <ImageView
         android:id="@+id/iconView"
-        android:layout_width="@dimen/mini_controller_icon_width"
+        android:layout_width="@dimen/mini_controller_icon_height"
         android:layout_height="@dimen/mini_controller_icon_height"
         android:layout_alignParentLeft="true"
         android:layout_marginLeft="7dp"
+        android:scaleType="centerCrop"
         android:src="@drawable/mini_controller_img_placeholder"/>
 
     <ImageView
@@ -44,6 +45,7 @@
         android:layout_toLeftOf="@+id/playPauseView"
         android:layout_toRightOf="@+id/iconView"
         android:ellipsize="end"
+        android:fontFamily="sans-serif"
         android:maxLines="1"
         android:textSize="@dimen/mini_controller_font_size_line1"/>
 
@@ -57,6 +59,8 @@
         android:layout_marginBottom="7dp"
         android:layout_toLeftOf="@+id/playPauseView"
         android:layout_toRightOf="@+id/iconView"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/secondarytext"
         android:ellipsize="end"
         android:maxLines="1"
         android:textSize="@dimen/mini_controller_font_size_line2"/>

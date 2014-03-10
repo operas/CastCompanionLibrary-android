@@ -256,9 +256,9 @@ public class VideoCastManager extends BaseCastManager
             MediaMetadata mm = mediaInfo.getMetadata();
             controller.setStreamType(mediaInfo.getStreamType());
             controller.setPlaybackStatus(mState, mIdleReason);
-            controller.setSubTitle(mContext.getResources().getString(R.string.casting_to_device,
-                    mDeviceName));
+            controller.setSubTitle(mContext.getResources().getString(R.string.casting_to_device, mDeviceName));
             controller.setTitle(mm.getString(MediaMetadata.KEY_TITLE));
+            //controller.setSubTitle(mm.getString(MediaMetadata.KEY_SUBTITLE));
             controller.setIcon(mm.getImages().get(0).getUrl());
         }
     }
@@ -1465,7 +1465,7 @@ public class VideoCastManager extends BaseCastManager
     /*
      * This is called by onStatusUpdated() of the RemoteMediaPlayer
      */
-    private void onRemoteMediaPlayerStatusUpdated() {
+    public void onRemoteMediaPlayerStatusUpdated() {
         LOGD(TAG, "onRemoteMediaPlayerStatusUpdated() reached");
         if (null == mApiClient || null == mRemoteMediaPlayer ||
                 null == mRemoteMediaPlayer.getMediaStatus()) {
