@@ -251,7 +251,7 @@ public class VideoCastManager extends BaseCastManager
             throws TransientNetworkDisconnectionException, NoConnectionException {
         checkConnectivity();
         checkRemoteMediaPlayerAvailable();
-        if (mRemoteMediaPlayer.getStreamDuration() > 0) {
+        if (mRemoteMediaPlayer.getMediaInfo() != null) {
             MediaInfo mediaInfo = getRemoteMediaInformation();
             MediaMetadata mm = mediaInfo.getMetadata();
             controller.setStreamType(mediaInfo.getStreamType());
